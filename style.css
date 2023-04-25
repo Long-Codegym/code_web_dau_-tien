@@ -182,9 +182,8 @@ input:checked + .slide-container .nav label {
 
 /*ket thúc chuyển ảnh*/
 
-/*sản phẩm*/
 
-
+/*tìm kiếm xe*/
 .but {
     margin-left: 500px;
 }
@@ -198,8 +197,8 @@ input:checked + .slide-container .nav label {
     height: 30px;
     width: 80px;
 }
-
-.content {
+/* xe đề mô*/
+.carmodel {
     width: 900px;
     margin: auto;
     display: grid;
@@ -209,7 +208,7 @@ input:checked + .slide-container .nav label {
     grid-row-gap: 40px;
     margin-bottom: 100px;
 }
-
+/*xe mẫu*/
 .item img {
     width: 300px;
     height: 300px;
@@ -217,7 +216,7 @@ input:checked + .slide-container .nav label {
     border-radius: 10px;
 }
 
-/*hết sản phầm*/
+/*bắt đầu phần cuối*/
 
 .sp{
     background-color: coral;
@@ -227,7 +226,7 @@ input:checked + .slide-container .nav label {
     text-align: center;
     border-spacing: 10px;
 }
-
+/* dùng cho thẻ table*/
 .sanPham thead th {
     border: solid 1px
 }
