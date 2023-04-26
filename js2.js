@@ -23,7 +23,7 @@ function hienthi() {
             "<td>" + arrayPoduct[i][2] + "</td>"+
             "<td> <img src=' " + arrayPoduct[i][3]+ "'width='300' height='300'></td>"+
             "<td>" + arrayPoduct[i][4] + "</td>"+
-            "<td><input id='suaten' type='text' placeholder='nhập tên cần sửa'> <button onclick='edit("+ i +")'>edit</button></td>"+
+            "<td><button onclick='edit("+ i +")'>edit</button></td>"+
             "<td> <button onclick='del("+i+")'>xóa</button></td>"+
             "</tr>";
     }

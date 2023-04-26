@@ -4,7 +4,7 @@ function findProductById() {
 
     // Hiển thị dữ liệu sản phẩm trong bảng HTML
     let tbody = document.getElementById("nd")
-    let idsp = document.getElementById("productId").value;
+    // let idsp = document.getElementById("productId").value;
     let  sp = localStorage.getItem('arrayPoduct');
     sp = JSON.parse(sp)
     console.log(sp)
