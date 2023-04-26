@@ -1,10 +1,14 @@
 
+// let userNameDK = localStorage.getItem("username");
+// let passwordDK = localStorage.getItem("password");
+// // userNameDK = JSON.parse(userNameDK);
+// // passwordDK = JSON.parse(passwordDK);
+
+
+//lấy dữu liệu localStorage từ đăng ký
+let users = JSON.parse(localStorage.getItem("users"));
 let userNameDK = localStorage.getItem("username");
 let passwordDK = localStorage.getItem("password");
-// userNameDK = JSON.parse(userNameDK);
-// passwordDK = JSON.parse(passwordDK);
-typeof passwordDK;
-
 function dangNhap() {
     let userNameDN = document.getElementById("nameDN").value;
     console.log(userNameDN)
@@ -18,4 +22,9 @@ function dangNhap() {
     }else {
         alert("Tài khoản hoặc mật khẩu không chính xác")
     }
+}
+
+function dangKy() {
+    window.location.href="dangky.html";
+
 }
