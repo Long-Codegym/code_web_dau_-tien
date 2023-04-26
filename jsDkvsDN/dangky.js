@@ -1,73 +1,34 @@
-// function dangKyTK() {
-//     let username = document.getElementById("username").value;
-//     localStorage.setItem("username", username);
-//     let psw1 = document.getElementById("psw").value;
-//     let psw2 = document.getElementById("psw-repeat").value;
-//     if (psw1 === psw2) {
-//         alert('Bạn đã đăng ký thành công');
-//         localStorage.setItem("password", psw1);
-//     } else {
-//         alert("Mật khẩu nhập lại không trùng khớp");
-//     }
-// }
-
-
 function dangKyTK() {
-
-    let username = document.getElementById("username").value;
+    let usernameDK = document.getElementById("username").value;
     let psw1 = document.getElementById("psw").value;
     let psw2 = document.getElementById("psw-repeat").value;
-    let users = JSON.parse(localStorage.getItem("users"));
-    if ( username ===''|| psw1 === '' || psw2 === '' || psw1 !=psw2) {
+    let users1 = JSON.parse(localStorage.getItem("users"));
+    if (users1== null) {
+        users1 = []
+    }
+    let newuser1=[];
+    if (usernameDK === '' || psw1 === '' || psw2 === '' || psw1 != psw2) {
         alert("cần nhập đủ thông tin");
+    // còn phần check điều kiện 2 tk ko đc giống nhau khi tạo
     // } else if (!checkUserName(username)) {
     //     alert("Tài khoản dã tồn  tại");
     } else {
-        // let newUser = (username,psw1 );
-        // users.push(newUser);
-        // Đẩy dữ liệu lên localStorage
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", psw1);
+        let newUser = [usernameDK, psw1];
+        users1.push(newUser);
+        newuser1.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users1));
         alert("đăng ký thành công");
-        location.href = 'dangnhap.html';
+        window.location.href = 'dangnhap.html';
     }
 };
-// function checkUserName(name) {
-//     for (let i = 0; i < users.length; i++) {
-//         if (users[i].username === name){
+
+// function checkUserName(usernameDK) {
+//     for (let i = 0; i < newuser1.length; i++) {
+//         if (newuser1[i][0] == usernameDK {
 //             return false;
 //         }
 //     }
 //     return true;
-// }
+// };
 
 
-// function checkUserName(name) {
-//     for (let i = 0; i < users.length; i++) {
-//         if (users[i].username === name) {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-//
-// function checkUser(username, psw1) {
-//     for (let i = 0; i < users.length; i++) {
-//         if (users[i].username === username && users[i].psw1 === password) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-//
-//
-// function login() {
-//     users = JSON.parse(localStorage.getItem("users"));
-// //     let username = document.getElementById("username").value;
-// //     // let password = document.getElementById("password").value;
-// //     // if (checkUser(username, password)) {
-// //     //     location.href = 'Admin.html';
-// //     // } else {
-// //     //     alert("Tài khoản không chính xác");
-// //     // }
-// }
